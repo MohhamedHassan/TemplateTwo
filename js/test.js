@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $(".load").css("display","none")
 $(".nav-link").click(function(){
       $("body,html").animate({
               scrollTop: $("#" + $(this).data("scroll")).offset().top - 90
