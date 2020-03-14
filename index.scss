@@ -1,0 +1,250 @@
+$hColor:#444444;
+$mainColor:#ec3237;
+$pcolor:#777777;
+$navBG:#1a1a1a;
+$white:white;
+$gray:gray;
+::selection{background:rgba(196, 45, 50, 0.68)}
+body{padding-top:40px}
+h2,.sec-on-s {
+    color: $hColor;
+    font-weight: 700;
+}
+h4
+{
+    font-size: 18px;
+    font-weight: 700;
+    color: $hColor
+}
+p{
+    color: $pcolor
+}
+.btn
+{
+        background-color: $mainColor
+}
+.iconsUl {
+    width:40px;
+    height:40px;
+    border: 1px solid $gray;
+    color:$gray;
+    margin-right: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s
+}
+.ulHover{
+    background-color: $mainColor;
+    color: $white;
+    border:1px solid  $mainColor;
+}
+/* end global*/
+.navbar{
+    background:$navBG;
+    padding-top:0;
+    padding-bottom: 0;
+   .navbar-nav {
+    .nav-link{
+        color:$white;
+    }
+    .nav-link:hover{color:$mainColor}
+   }
+    .nav-item:first-of-type 
+    {
+        .nav-link
+        {
+            color:$mainColor
+            
+        }
+    }
+    .nav-item:first-of-type
+    {
+        border-bottom: 3px solid $mainColor;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 14px
+    }
+    .nav-item
+    {
+    padding:17px 15px;
+    } 
+    img{width:75px}
+}
+// end navbar
+header{
+    height:100vh;
+    background-image:url("images/pic1.jpg");
+    background-size: cover;
+    position: relative;
+    color:$white;
+    background-position: right;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:rgba(236, 51, 55, 0.7);
+    }
+    h1 {
+        font-weight: 900;
+        color: $white;
+        font-size: 55px;
+    }
+    p
+    {
+            font-size: 25px;
+            color:$white;
+    }
+    button{
+        border: 2px solid $white;;
+        background: none;
+        border-radius: 0;
+        padding: 8px 20px;
+        text-transform: uppercase;
+        color:$white;
+        span{font-size: 10px}
+    }
+    button:hover{
+        background:$white;
+        color: $mainColor
+    }
+     i
+        {
+            position: absolute;
+            bottom: 65px;
+            left: 50%;
+            font-size: 63px;
+            animation-name: moving;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-direction: alternate
+        }
+}
+@keyframes moving {
+    0%{bottom:25px}
+    100%{bottom:65px}
+}
+//end header
+.sec-one {
+    li {@extend .iconsUl ;}
+    li:hover{@extend .ulHover ;}
+    .row:first-of-type{
+        margin-bottom: 100px
+    }
+    .progress-bar{
+        background: $mainColor;
+    }
+}
+// end section one
+.sec-two
+{
+   background-color: #f5f5f5;
+   .bg-white
+    {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+    .bg-white:hover .sec-t-i {
+        background-color: $mainColor;
+        color:$white
+    }
+    .bg-white:hover .sec-t-h {
+        color:$mainColor
+    }
+    .bg-white > div
+    {
+        color: $pcolor;
+        background-color: #eeeeee;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:15px auto
+    }
+}
+
+// end section two
+.sec-three {
+    padding:100px 0;
+    background-image:url(images/pic4.jpg);
+    background-size: 100% 100%;
+    .row > div > div{
+        border: 1px solid rgba(255,255,255,0.1);
+        padding-top: 20px;
+    }
+    i
+    {
+        color:$mainColor;
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    p:first-of-type
+        {
+            color: $white;
+            font-weight: 900;
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+p:last-of-type
+{
+    color: $mainColor;
+    font-size: 20px;
+}
+}
+
+// end section three
+.sec-four{background-color: #f5f5f5;}
+// end section four 
+.sec-five{
+    padding:70px 0;
+    background-image:url("images/pic14.jpg");
+    background-size: cover;
+    
+ }
+ /*end siction five */
+ footer {
+    ul:first-of-type {
+        li
+    {
+        color:$pcolor;
+        margin-bottom: 20px
+    }
+    }
+    ul:last-of-type {
+        li {@extend .iconsUl ;}
+        li:hover {@extend .ulHover ;}
+    }
+    .finish{
+        margin-top:100px;
+        margin-bottom:30px
+     }
+ }
+ /* up button */ 
+ .up
+ {
+     background: $mainColor;
+     color: $white;
+     width: 40px;
+     height: 40px;
+     line-height: 40px;
+     text-align: center;
+     border-radius: 50%;
+     position: fixed;
+     right: 30px;
+     bottom: 30px;
+     display: none
+ }
+ // end footer
+ @media (max-width: 768px) { 
+    header h1 {font-size: 25px}
+    .navbar img{width:50px}
+    .navbar {
+     .nav-item {
+        padding: 0px 15px;
+    }
+      }
+      header i{display:none !important}
+  }
